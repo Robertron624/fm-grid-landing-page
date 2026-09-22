@@ -19,9 +19,9 @@
        <span></span> Bridge Collective
       </a>
   
-      <div class="mobile-menu__trigger">
-        <button aria-label="Open menu" class="mobile-menu__icon">
-          <img src="./assets/images/icon-menu.svg" alt="Menu">
+      <div class="mobile-menu__trigger-container">
+        <button id="mobile-menu__trigger" aria-label="Open menu">
+          <img class="mobile-menu__icon" src="./assets/images/icon-menu.svg" alt="Menu">
         </button>
       </div>
     </div>
@@ -86,7 +86,10 @@
 
 
   <!-- Menu panel — hidden until the hamburger is activated -->
-  <nav class="mobile-menu" hidden>
+   <div id="overlay" class="overlay">
+    <!-- Overlay for mobile menu -->
+   </div>
+  <nav class="mobile-menu">
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#our-work">Our Work</a></li>
@@ -100,5 +103,6 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./assets/scripts/main.js"></script>
 </body>
 </html>
