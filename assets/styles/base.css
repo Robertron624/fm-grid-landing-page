@@ -1,0 +1,61 @@
+/**
+ * Main stylesheet for the Grid landing page
+*/
+
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button,
+a {
+    text-decoration: none;
+    color: inherit;
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+/** 
+ * Global styles for the entire page
+*/
+
+/* Load font families from file */
+@font-face {
+    font-family: "inter";
+    src: url("../fonts/inter/inter-variable.ttf");
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+
+    /* Global variables */
+
+    /* Colors */
+
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    --blue-200: hsl(224, 100%, 95%);
+    --blue-400: hsl(220, 100%, 64%);
+    --blue-600: hsl(228, 100%, 60%);
+    --blue-700: hsl(228, 99%, 58%);
+
+    /* Font sizes */
+    --font-size-normal: 17px;
+    --font-size-small: 14px;
+
+    /* Global rules */
+    font-family: "inter", Arial, sans-serif;
+    line-height: 1.35;
+    background-color: var(--blue-700);
+    color: var(--white);
+    font-size: var(--font-size-normal);
+}
