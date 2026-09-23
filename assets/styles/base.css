@@ -62,4 +62,18 @@ body {
     background-color: var(--blue-700);
     color: var(--white);
     font-size: var(--font-size-normal);
+    margin: 0;
+}
+
+/* Desktop styles */
+
+@media (min-width: 1024px) {
+    body {
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+
+        min-height: 100vh; /* Ensure the body takes full viewport height */
+
+        grid-template-columns: 1fr; /* Single column layout for desktop */
+    }
 }

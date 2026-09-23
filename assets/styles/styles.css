@@ -22,124 +22,200 @@ header {
       }
     }
   }
-}       
+}
 
 main {
-    .hero {
-        padding-block: 3rem;
-        padding-inline: 1.5rem;
-        border-bottom: 1px solid var(--blue-200);
+  .hero {
+    padding-block: 3rem;
+    padding-inline: 1.5rem;
+    border-bottom: 1px solid var(--blue-200);
 
-        h1 {
-            font-weight: 500;
-            font-size: 2.5rem;
-        }
-        p {
-            margin-top: 1rem;
-            color: var(--blue-200);
-        }
+    h1 {
+      font-weight: 500;
+      font-size: 2.5rem;
     }
-
-    .feature-cards {
-        display: grid;
-        .card {
-            padding-inline: 1.5rem;
-            border-bottom: 1px solid var(--blue-200);
-            padding-block: 1.5rem;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 16rem;
-
-            .card-top {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-
-                h2 {
-                    font-weight: 500;
-                }
-            }
-            .card-bottom {
-                margin-top: 1rem;
-
-                p:first-of-type {
-                    font-size: 0.875rem;
-                    color: var(--white);
-                }
-                p:last-of-type {
-                    font-size: 0.875rem;
-                    color: var(--blue-200);
-                }
-            }
-            
-        }
+    p {
+      margin-top: 1rem;
+      color: var(--blue-200);
     }
+  }
+
+  .feature-cards {
+    display: grid;
+    .card {
+      padding-inline: 1.5rem;
+      border-bottom: 1px solid var(--blue-200);
+      padding-block: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 16rem;
+
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+          font-weight: 500;
+        }
+      }
+      .card-bottom {
+        margin-top: 1rem;
+
+        p:first-of-type {
+          font-size: 0.875rem;
+          color: var(--white);
+        }
+        p:last-of-type {
+          font-size: 0.875rem;
+          color: var(--blue-200);
+        }
+      }
+    }
+  }
 }
 
 footer {
-    padding: 1.5rem;
+  padding: 1.5rem;
 
-    p {
-        font-size: 0.875rem;
-        color: var(--blue-200);
-    }
+  p {
+    font-size: 0.875rem;
+    color: var(--blue-200);
+  }
 }
 
 /* Menu Animation */
 
 .mobile-menu {
-    position: fixed;
-    top: 70px; /* Adjust to match header height */
-    left: 0;
-    width: 100%;    
-    background-color: var(--blue-700);
-    padding: 3rem 1rem;
-    z-index: 10;
+  position: fixed;
+  top: 70px; /* Adjust to match header height */
+  left: 0;
+  width: 100%;
+  background-color: var(--blue-700);
+  padding: 3rem 1rem;
+  z-index: 10;
 
-    /* Start hidden and closed */
-    visibility: hidden;
-    clip-path: inset(0 0 100% 0); /* Hides everything from the bottom up */
-    transition: clip-path 0.4s ease-in-out, visibility 0.4s;
+  /* Start hidden and closed */
+  visibility: hidden;
+  clip-path: inset(0 0 100% 0); /* Hides everything from the bottom up */
+  transition:
+    clip-path 0.4s ease-in-out,
+    visibility 0.4s;
 }
 /* Open state for the menu */
 .mobile-menu.is-open {
-    visibility: visible;
-    clip-path: inset(0 0 0 0); /* Fully expands downwards */
+  visibility: visible;
+  clip-path: inset(0 0 0 0); /* Fully expands downwards */
 }
 
 /* Overlay Animation */
 .overlay {
-    position: fixed;
-    top: 70px; /* Adjust to match header height */
-    left: 0;
-    width: 100%;
-    height: calc(100% - 70px); /* Adjust to match header height */
-    background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 70px; /* Adjust to match header height */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 70px); /* Adjust to match header height */
+  background-color: rgba(0, 0, 0, 0.5);
 
-    /* Start hidden */
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.4s ease-in-out, visibility 0.4s;
+  /* Start hidden */
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.4s ease-in-out,
+    visibility 0.4s;
 }
 
 /* Open state for the overlay */
 .overlay.is-open {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 /* Basic styles for the menu */
 .mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  a {
+    color: var(--white);
+    font-weight: 500;
+    font-size: 1.5rem;
+
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: center;
+    align-items: flex-end;
+  }
 
-    a {
-        color: var(--white);
-        font-weight: 500;
-        font-size: 1.5rem;
-    }
+  a::after {
+    content: '';
+    height: 2px;
+    background-color: var(--white);
+    display: block;
+    margin-top: 0.25rem;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
 }
 
+/* End of mobile and general styles */
+
+/* Desktop styles */
+
+/* Desktop breakpoint is typically 1024px and above */
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: 1.2fr 2fr;
+
+    .feature-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+
+      .card {
+        border-left: 1px solid var(--blue-200);
+      }
+    }
+  }
+
+  .overlay {
+    top: 80px;
+  }
+
+  .mobile-menu {
+    /* Pin the menu to the right side for desktop */
+    left: auto;
+    right: 0;
+
+    /* Give it a fixed width and make it fill the screen height below */
+    width: 350px;
+    height: calc(100vh - 70px); /* Adjust to match header height */
+
+    /* Change the animation to slide horizontally  */
+    /* Hides the element by cropping 100% from the left edge */
+    clip-path: inset(0 0 0 100%);
+
+    ul {
+      align-items: flex-end;
+
+      a {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  /*
+        The is-open state remains exactly the same.
+        It'll inherit the clip-path: inset(0 0 0 0) from the mobile styles,
+        causing it to smoothly un-crop from right to left.
+    */
+}
