@@ -32,7 +32,7 @@ Build a responsive charity landing page that presents Bridge Collective's missio
 
 ### Links
 
-- Solution URL: _Add the URL to your solution_
+- Solution URL: [GitHub Repository](http://github.com/Robertron624/fm-grid-landing-page)
 - Live Site URL: _Add the URL to your live site_
 
 ## My process 
