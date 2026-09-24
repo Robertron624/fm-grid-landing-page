@@ -1,6 +1,6 @@
 header {
   padding-block: 1.5rem;
-  border-bottom: 1px solid var(--blue-200);
+  border-bottom: var(--border-light-blue);
   position: relative;
   z-index: 20;
 
@@ -28,7 +28,7 @@ main {
   .hero {
     padding-block: 3rem;
     padding-inline: 1.5rem;
-    border-bottom: 1px solid var(--blue-200);
+    border-bottom: var(--border-light-blue);
 
     h1 {
       font-weight: 500;
@@ -44,7 +44,7 @@ main {
     display: grid;
     .card {
       padding-inline: 1.5rem;
-      border-bottom: 1px solid var(--blue-200);
+      border-bottom: var(--border-light-blue);
       padding-block: 1.5rem;
       display: flex;
       flex-direction: column;
@@ -89,7 +89,7 @@ footer {
 
 .mobile-menu {
   position: fixed;
-  top: 70px; /* Adjust to match header height */
+  top: 5rem; /* Adjust to match header height */
   left: 0;
   width: 100%;
   background-color: var(--blue-700);
@@ -112,10 +112,10 @@ footer {
 /* Overlay Animation */
 .overlay {
   position: fixed;
-  top: 70px; /* Adjust to match header height */
+  top: 5rem; /* Adjust to match header height */
   left: 0;
   width: 100%;
-  height: calc(100% - 70px); /* Adjust to match header height */
+  height: calc(100% - 5rem); /* Adjust to match header height */
   background-color: rgba(0, 0, 0, 0.5);
 
   /* Start hidden */
@@ -170,7 +170,7 @@ footer {
 
 /* Desktop breakpoint is typically 1024px and above */
 
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   main {
     display: grid;
     grid-template-columns: 1.2fr 2fr;
@@ -188,7 +188,7 @@ footer {
       grid-template-rows: repeat(2, 1fr);
 
       .card {
-        border-left: 1px solid var(--blue-200);
+        border-left: var(--border-light-blue);
       }
     }
   }
@@ -197,12 +197,12 @@ footer {
     .inner {
       display: flex;
       justify-content: space-between;
-      align-items: center;  
+      align-items: center;
     }
   }
 
   .overlay {
-    top: 80px;
+    top: 5rem;
   }
 
   .mobile-menu {
@@ -211,8 +211,8 @@ footer {
     right: 0;
 
     /* Give it a fixed width and make it fill the screen height below */
-    width: 350px;
-    height: calc(100vh - 70px); /* Adjust to match header height */
+    width: 21.875rem;
+    height: calc(100vh - 5rem); /* Adjust to match header height */
 
     /* Change the animation to slide horizontally  */
     /* Hides the element by cropping 100% from the left edge */

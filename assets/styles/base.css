@@ -56,6 +56,9 @@ body {
     --font-size-normal: 17px;
     --font-size-small: 14px;
 
+    /* borders */
+    --border-light-blue: 1px solid var(--blue-200);
+
     /* Global rules */
     font-family: "inter", Arial, sans-serif;
     line-height: 1.35;
